@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8555cdc771.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/user logo orange.png" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Celerates Project</p>
+            <h1>Hi, I'm <span>Anya</span>.<br>Welcome to my<br>portfolio.</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/User photo.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Welcome to my digital media portfolio! I'm Anya, a photo editor, video editor, and illustrator. I specialize in creating engaging content for various platforms, including Instagram, Wixsites, and creative magazines. My goal is to help you tell your story and connect with your audience. Feel free to browse my portfolio and get in touch with me.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/App interfaces</li>
+                        <li><span>Illustrating</span><br>Creating artworks</li>
+                        <li><span>Content Editing</span><br>Editing photos and videos for social media</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>IKMI UI</span><br>Coordinator of Lemon/Milk Online Magazine and Staff of Creative Production</li>
+                        <li><span>UI MUN Club</span><br>Staff of PR division</li>
+                        <li><span>Cakrawala Budaya FIB UI</span><br>Video Editor and Staff of Documentation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2021-Present</span><br>Undergraduate of English Studies at Universitas Indonesia</li>
+                        <li><span>2021</span><br>Graduated from SMAN 5 Bandung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">UI/UX Design</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/UI xxi before.png">
+            </div>
+            <div class="work">
+                <img src="images/ui xxi mockup.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="sub-title">My Illustrations</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="Images/illustration 1.png">
+        </div>
+        <div class="work">
+            <img src="Images/illustration 2.png">
+        </div>
+        <div class="work">
+            <img src="Images/illustration 3.png">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="sub-title">My Media Contents</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="Images/Instagram Post.png">
+        </div>
+        <div class="work">
+            <img src="Images/Artboard 3.png">
+        </div>
+
+    </div>
+</div>
+<!-- -------------contact---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> felisa.dwivanya1@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>085210164988</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/felisadwivanya"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/anya_fels"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+</body>
+</html>
